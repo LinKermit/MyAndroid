@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--这是View补间动画，帧动画在drawable中，属性动画在animator文件夹-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator = "@android:anim/accelerate_interpolator">
+    <!--android:detachWallpaper 	setDetachWallpaper(boolean) 	是否在壁纸上运行-->
+    <!--android:duration 	        setDuration(long) 	动画持续时间，毫秒为单位-->
+    <!--android:fillAfter 	        setFillAfter(boolean) 	控件动画结束时是否保持动画最后的状态-->
+    <!--android:fillBefore      	setFillBefore(boolean) 	控件动画结束时是否还原到开始动画前的状态-->
+    <!--android:fillEnabled 	    setFillEnabled(boolean) 	与android:fillBefore效果相同-->
+    <!--android:interpolator 	    setInterpolator(Interpolator) 	设定插值器（指定的动画效果，譬如回弹等）-->
+    <!--android:repeatCount 	    setRepeatCount(int) 	重复次数-->
+    <!--android:repeatMode 	        setRepeatMode(int) 	重复类型有两个值，reverse表示倒序回放，restart表示从头播放-->
+    <!--android:startOffset 	    setStartOffset(long) 	调用start函数之后等待开始运行的时间，单位为毫秒-->
+    <!--android:zAdjustment 	    setZAdjustment(int) 	表示被设置动画的内容运行时在Z轴上的位置（top/bottom/normal），默认为normal-->
+
+    <alpha android:fromAlpha="1"
+        android:toAlpha="0.05"
+        android:duration="3000"/>
+    <!--android:fromAlpha 	AlphaAnimation(float fromAlpha, …) 	动画开始的透明度（0.0到1.0，0.0是全透明，1.0是不透明）-->
+    <!--android:toAlpha 	AlphaAnimation(…, float toAlpha) 	动画结束的透明度，同上-->
+
+
+    <rotate android:fromDegrees="0"
+            android:toDegrees="1800"
+            android:pivotX="50%"
+            android:pivotY="50%"/>
+    <!--pivotX 旋转的中心位置，0.5f为控件的中心-->
+
+    <scale  android:fromXScale="1.0"
+            android:toXScale="0.1"
+            android:fromYScale="1.0"
+            android:toYScale="0.1"
+            android:pivotX="50%"
+            android:pivotY="50%"/>
+    <!--android:fromXScale 	ScaleAnimation(float fromX, …) 	初始X轴缩放比例，1.0表示无变化-->
+    <!--android:toXScale 	ScaleAnimation(…, float toX, …) 	结束X轴缩放比例-->
+    <!--android:fromYScale 	ScaleAnimation(…, float fromY, …) 	初始Y轴缩放比例-->
+    <!--android:toYScale 	ScaleAnimation(…, float toY, …) 	结束Y轴缩放比例-->
+    <!--android:pivotX 	ScaleAnimation(…, float pivotX, …) 	缩放起点X轴坐标（数值、百分数、百分数p，譬如50表示以当前View左上角坐标加50px为初始点、50%表示以当前View的左上角加上当前View宽高的50%做为初始点、50%p表示以当前View的左上角加上父控件宽高的50%做为初始点）-->
+    <!--android:pivotY 	ScaleAnimation(…, float pivotY) 	缩放起点Y轴坐标，同上规律-->
+
+
+</set>
